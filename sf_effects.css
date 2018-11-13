@@ -6,50 +6,68 @@
    Case Problem 2
    
    Save your Fork Graphic Design Styles
-   Author: 
-   Date:   
+   Author: Maria De Jesus Rizo
+   Date: 11.09.18
 
    Filename: sf_effects.css
 
 */
 
 /* Body Header Styles */
+/* Styles within this section will affect the body element in the HTML document */
+/* The selector an properties below state that the body will have a body shadow on both it right and left of the specified dimensions and blur. */
 body {
-    -webkit-filter: drop-shadow(10px 10px 50px rgb(51, 51, 51));
-    filter: drop-shadow(10px 10px 50px rgb(51, 51, 51));
+    box-shadow: 10px 10px 50px rgb(51, 51, 51), -10px 10px 50px rgb(51, 51, 51);
 }
 
 
 /* Navigation Tabs List Styles */
+/* Styles within this section will affect the navigation tabs on web page. */
+/* The selector below states that the nav with a class of tabs nested within the header which is a child of the body will be affected. The background property states that the image will be used as the background of the element, centered on the page and taking 100% of the available space. The no repeat attribute makes  it so that the image will not continuously repeat to fix its container.   */
 body>header nav.tabs {
     background: url(sf_back1.png) center center/ 100% no-repeat;
 }
-
+/* The selctor above applies to this selector as well. the only difference being that it is now affecting the li elements. The transfrom property transforms the element to have a perspective of the specified value and be rotated along the elements X axis by the degree listed. */
 body>header nav.tabs li {
-    perspective: 50px;
-    transform: rotateX(20deg);
+    transform: perspective(50px) rotateX(20deg);
 }
-
+/* The selecror above applies to this selector as well, the only differnce being that styles within will affect the element when it is in the state of hover as specified by the psuedo element. The background color property sets the background color of the element. */
 body>header nav.tabs li:hover {
     background-color: rgb(231, 231, 231);
 }
 
 /* Left Section Styles */
+/* Styles within this section will affect the nav element with a class of vertical which is nested in the section with an id of left. The border property add a border of the specified size and color around the element. The border radius property rounds the border of the element by the specified pixel dimensions. */
 section#left nav.vertical {
     border: 1px solid rgb(20, 167, 170);
     border-radius: 25px;
 }
 
+/* The selector above applies to this selector as well, the only difference being that these properties will affect the h1 elements.  */
 section#left nav.vertical h1 {
     border-radius: 23px 23px 0px 0px;
 }
 
 /* Center Article Styles */
+/* Styles within this section will affect the center article within the HTML document. */
+/* The selector below states that the article element nested within the section element with an id of center will be affected. The background radial gradient property adds a radial gradient to the background of the elemenent. The box shadow property adds a shadow around the element of the specified dimensions.  */
 section#center article {
     background: radial-gradient(white 30%, rgb(151, 151, 151));
     border: 1px solid rgb(151, 151, 151);
     border-radius: 50px;
-    box-shadow: 10px 10px 0px
+    box-shadow: rgb(51,51,51) 10px 10px 20px;
 }
 
 /* Blockquote Styles */
+/* Styles within this section will affect the blockquote elements within the HTML. */
+/* The selector states that the blockquote element will be affected, The background size property states that the size of the background will be 100% horizontally and vertically. The filter element applies a filter to the element, in this case a drop-shadow. */
+blockquote{
+    background: url(sf_speech.png) no-repeat;
+    background-size: 100% 100%;
+    -webkit-filter: drop-shadow(5px 5px 10px rgb(51, 51, 51));
+    filter:drop-shadow(5px 5px 10px rgb(51, 51, 51));
+}
+/* The selector below states that the img element nested within the cite element will be affected. */
+cite img{
+    border-radius: 50%;
+}
